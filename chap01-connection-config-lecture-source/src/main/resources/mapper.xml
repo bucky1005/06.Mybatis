@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--쿼리 담을 곳
+    Mybatis에서는 쿼리문을 xml 파일로 관리하는 것이 가장 좋음(코드 컨벤션이 그대로 적용되기 때문)-->
+<!-- 설명. 쿼리를 도메인별로 구분하여 mapper.xml 파일이 여러개 있을 때,
+        mapper를 구분하기 위해 namespace를 설정하여 각 mapper의 이름을 설정한다.-->
+<mapper namespace="mapper">
+    <select id="selectNow" resultType="java.util.Date">
+        SELECT
+                NOW()
+    </select>
+</mapper>
