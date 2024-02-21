@@ -54,6 +54,9 @@ public class MenuService {
         } else {
             sqlSession.rollback();
         }
+
+        sqlSession.close();
+
         return (result > 0)? true : false;
     }
 
@@ -68,6 +71,9 @@ public class MenuService {
         } else {
             sqlSession.rollback();
         }
+
+        sqlSession.close();
+
         return  (result > 0)? true : false;
     }
 
@@ -82,6 +88,8 @@ public class MenuService {
         } else {
             sqlSession.rollback();
         }
+
+        sqlSession.close();
 
         return (result > 0)? true : false;
     }
